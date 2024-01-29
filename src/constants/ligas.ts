@@ -1,3 +1,19 @@
+export const ligaModel = {
+    composicao: {
+        C: {
+            min: 0,
+            max: 0,
+        },
+        Mn: {
+            min: 0,
+            max: 0,
+        },
+        Al: {
+            min: 0,
+            max: 0,
+        },
+    },
+}
 export const ligas = {
     material1: {
         composicao: {
