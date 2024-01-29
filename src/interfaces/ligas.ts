@@ -1,4 +1,4 @@
 export interface IFaixa {
-    min: number,
+    min: number
     max: number
 }
