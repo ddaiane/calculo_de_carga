@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './assets/css/App.css'
 
 import LigaFinalDefinition from './components/LigaFinalDefinition'
+import ListaMateriais from './components/ListaMateriais'
 
 import { ligas } from './constants/ligas'
 
@@ -9,7 +10,9 @@ function App() {
     const [ligaFinal, setLigaFinal] = useState(null)
     const [pesoFinal, setPesoFinal] = useState(null)
 
-    const apresentaMateriais = () => <p>mostra materiais relevantes</p>
+    const apresentaMateriais = () => (
+        <ListaMateriais ligas={ligas} ligaFinal={ligaFinal} />
+    )
 
     return (
         <>
@@ -20,8 +23,8 @@ function App() {
                     setPesoFinal={setPesoFinal}
                 />
             </div>
-            
-            <div>{ligaFinal && pesoFinal && apresentaMateriais() }</div>
+
+            <div>{ligaFinal && pesoFinal && apresentaMateriais()}</div>
         </>
     )
 }
