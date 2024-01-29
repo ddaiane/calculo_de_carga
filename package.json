@@ -2,6 +2,7 @@
     "name": "app_with_sheet",
     "private": true,
     "version": "0.0.0",
+    "homepage": "https://ddaiane.github.io/liga_metal",
     "type": "module",
     "engines": {
         "node": "18.19.0"
@@ -9,12 +10,15 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "prettier": "prettier --write .",
         "preview": "vite preview"
     },
     "dependencies": {
         "bootstrap": "^5.3.2",
+        "gh-pages": "^6.1.1",
         "react": "^18.2.0",
         "react-bootstrap": "^2.10.0",
         "react-dom": "^18.2.0"
