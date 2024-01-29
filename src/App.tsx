@@ -1,26 +1,28 @@
 import { useState } from 'react'
 import './assets/css/App.css'
 
+import LigaFinalDefinition from './components/LigaFinalDefinition'
+
+import { ligas } from './constants/ligas'
+
 function App() {
-    const [count, setCount] = useState(0)
+    const [ligaFinal, setLigaFinal] = useState(null)
+    const [pesoFinal, setPesoFinal] = useState(null)
+
+    const apresentaMateriais = () => <p>mostra materiais relevantes</p>
+    const nada = () => <p></p>
 
     return (
         <>
-            <div></div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
+            <div>
+                <LigaFinalDefinition
+                    ligas={ligas}
+                    setLigaFinal={setLigaFinal}
+                    setPesoFinal={setPesoFinal}
+                />
             </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
+            <div>{ligaFinal && pesoFinal ? apresentaMateriais() : nada()}</div>
         </>
     )
 }
-
 export default App
