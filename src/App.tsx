@@ -10,7 +10,6 @@ function App() {
     const [pesoFinal, setPesoFinal] = useState(null)
 
     const apresentaMateriais = () => <p>mostra materiais relevantes</p>
-    const nada = () => <p></p>
 
     return (
         <>
@@ -21,7 +20,8 @@ function App() {
                     setPesoFinal={setPesoFinal}
                 />
             </div>
-            <div>{ligaFinal && pesoFinal ? apresentaMateriais() : nada()}</div>
+            
+            <div>{ligaFinal && pesoFinal && apresentaMateriais() }</div>
         </>
     )
 }
