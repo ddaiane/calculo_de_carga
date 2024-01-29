@@ -1,14 +1,14 @@
-version: "3.8"
+version: '3.8'
 services:
- app_liga_metal:
-   image: node:18-alpine
-   container_name: app_liga_metal
-   ports:
-     - 5173:5173
-   working_dir: /srv/app
-   volumes:
-     - type: bind
-       source: ./
-       target: /srv/app
-   tty: true
-   command: sh -c "npm run dev"
+    app_liga_metal:
+        image: node:18-alpine
+        container_name: app_liga_metal
+        ports:
+            - 5173:5173
+        working_dir: /srv/app
+        volumes:
+            - type: bind
+              source: ./
+              target: /srv/app
+        tty: true
+        command: sh -c "npm run dev"
