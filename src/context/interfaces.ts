@@ -2,6 +2,11 @@ import React from 'react'
 import { TCompositionRange, TCompositionFinal } from '../interfaces/ligas'
 import { TLigas } from '../constants/interfaces'
 
+type TMateriaisUsados = {
+  name: string
+  peso: number
+}
+
 export interface IGlobalContext {
   ligaDesejadaComposicao: TCompositionRange
   setLigaDesejadaComposicao: React.Dispatch<React.SetStateAction<TCompositionRange>>
@@ -14,4 +19,6 @@ export interface IGlobalContext {
   setPesoFinalDesejado: React.Dispatch<React.SetStateAction<number>>
   showMaterialsAndComposition: boolean
   setShowMaterialsAndComposition: React.Dispatch<React.SetStateAction<boolean>>
+  materiaisUsados: TMateriaisUsados[]
+  setMateriaisUsados: React.Dispatch<React.SetStateAction<TMateriaisUsados[]>>
 }
