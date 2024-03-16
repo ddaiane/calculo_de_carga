@@ -7,11 +7,17 @@ import { GlobalContext } from '../context/GlobalProvider'
 import { IGlobalContext } from '../context/interfaces'
 
 export default function LigaFinalDefinition() {
-  const { ligas, ligaDesejadaName, setLigaDesejadaName, pesoFinalDesejado, setPesoFinalDesejado, setShowMaterialsAndComposition } =
-    useContext<IGlobalContext>(GlobalContext)
+  const {
+    ligas,
+    ligaDesejadaName,
+    setLigaDesejadaName,
+    pesoFinalDesejado,
+    setPesoFinalDesejado,
+    setShowMaterialsAndComposition,
+  } = useContext<IGlobalContext>(GlobalContext)
 
   setShowMaterialsAndComposition(false)
-  if(ligaDesejadaName && pesoFinalDesejado) setShowMaterialsAndComposition(true)
+  if (ligaDesejadaName && pesoFinalDesejado) setShowMaterialsAndComposition(true)
 
   return (
     <Stack direction="horizontal" gap={5} className="mx-auto">

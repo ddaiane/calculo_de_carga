@@ -16,7 +16,7 @@ export default function ListaMateriais() {
 
   const [showOnlyRelevant, setShowOnlyRelevant] = useState(true)
 
-  if(!showMaterialsAndComposition) return null
+  if (!showMaterialsAndComposition) return null
 
   const printRow = (materialName: string) => {
     return (
@@ -30,7 +30,8 @@ export default function ListaMateriais() {
   const checkIfRelevant = (materiaPrima: keyof TLigas) => {
     if (materiaPrima === ligaDesejadaName) return false
 
-    const ligaDesejadaElems: [string, TElementRange][] = Object.entries(ligaDesejadaComposicao)
+    const ligaDesejadaElems: [string, TElementRange][] =
+      Object.entries(ligaDesejadaComposicao)
     const materiaPrimaComposicao = ligas[materiaPrima].composicao
 
     //para ser relevante, a materia prima não deve ter componente que não tem na liga final desejada

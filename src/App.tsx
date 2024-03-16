@@ -12,7 +12,6 @@ import ListaComposicao from './components/ListaComposicao'
 import { GlobalProvider } from './context/GlobalProvider'
 
 function App() {
-
   return (
     <>
       <GlobalProvider>
@@ -26,14 +25,10 @@ function App() {
                 <ListaMateriais />
               </div>
               <div>
-                <ListaComposicao
-                  compositionType="Composição Resultante"
-                />
+                <ListaComposicao compositionType="Composição Resultante" />
               </div>
               <div>
-                <ListaComposicao
-                  compositionType="Composição Desejada"
-                />
+                <ListaComposicao compositionType="Composição Desejada" />
               </div>
             </Stack>
           </Stack>
