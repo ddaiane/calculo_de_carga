@@ -12,4 +12,6 @@ export interface IGlobalContext {
   ligas: TLigas
   pesoFinalDesejado: number
   setPesoFinalDesejado: React.Dispatch<React.SetStateAction<number>>
+  showMaterialsAndComposition: boolean
+  setShowMaterialsAndComposition: React.Dispatch<React.SetStateAction<boolean>>
 }
