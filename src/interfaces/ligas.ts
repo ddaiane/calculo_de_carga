@@ -1,10 +1,10 @@
 export interface IFaixa {
-    min: number
-    max: number
+  min: number
+  max: number
 }
 
 export interface IComposicao {
-    C: IFaixa | number
-    Mn: IFaixa | number
-    Al: IFaixa | number
+  C: IFaixa | number
+  Mn: IFaixa | number
+  Al: IFaixa | number
 }

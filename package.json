@@ -1,41 +1,41 @@
 {
-    "name": "app_with_sheet",
-    "private": true,
-    "version": "0.0.0",
-    "homepage": "https://ddaiane.github.io/liga_metal",
-    "type": "module",
-    "engines": {
-        "node": "18.19.0"
-    },
-    "scripts": {
-        "dev": "vite",
-        "build": "tsc && vite build",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
-        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-        "prettier": "prettier --write .",
-        "preview": "vite preview"
-    },
-    "dependencies": {
-        "bootstrap": "^5.3.2",
-        "gh-pages": "^6.1.1",
-        "react": "^18.2.0",
-        "react-bootstrap": "^2.10.0",
-        "react-dom": "^18.2.0"
-    },
-    "devDependencies": {
-        "@types/react": "^18.2.43",
-        "@types/react-dom": "^18.2.17",
-        "@typescript-eslint/eslint-plugin": "^6.14.0",
-        "@typescript-eslint/parser": "^6.14.0",
-        "@vitejs/plugin-react": "^4.2.1",
-        "eslint": "^8.55.0",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-prettier": "^5.1.3",
-        "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-react-refresh": "^0.4.5",
-        "prettier": "^3.2.4",
-        "typescript": "^5.2.2",
-        "vite": "^5.0.8"
-    }
+  "name": "app_with_sheet",
+  "private": true,
+  "version": "0.0.0",
+  "homepage": "https://ddaiane.github.io/liga_metal",
+  "type": "module",
+  "engines": {
+    "node": "18.19.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "prettier": "prettier --write .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "gh-pages": "^6.1.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "prettier": "^3.2.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  }
 }
