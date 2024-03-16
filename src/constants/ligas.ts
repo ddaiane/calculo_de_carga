@@ -1,33 +1,51 @@
-export const ligaModel = {
-  composicao: {
-    C: {
-      min: 0,
-      max: 0,
-    },
-    Mn: {
-      min: 0,
-      max: 0,
-    },
-    Al: {
-      min: 0,
-      max: 0,
-    },
-  },
-}
-export const ligas = {
+import { TLigas } from './interfaces'
+
+export const ligas: TLigas = {
   material1: {
     composicao: {
       C: {
         min: 0,
-        max: 20,
+        max: 0,
       },
       Mn: {
         min: 0,
         max: 0,
       },
       Al: {
-        min: 10,
-        max: 15,
+        min: 0,
+        max: 0,
+      },
+      Si: {
+        min: 0,
+        max: 0,
+      },
+      Cr: {
+        min: 0,
+        max: 0,
+      },
+      Ni: {
+        min: 0,
+        max: 0,
+      },
+      Cu: {
+        min: 0,
+        max: 0,
+      },
+      Mo: {
+        min: 0,
+        max: 0,
+      },
+      Nb: {
+        min: 0,
+        max: 0,
+      },
+      W: {
+        min: 0,
+        max: 0,
+      },
+      V: {
+        min: 0,
+        max: 0,
       },
     },
   },
@@ -39,11 +57,43 @@ export const ligas = {
       },
       Mn: {
         min: 0,
-        max: 2,
+        max: 0,
       },
       Al: {
         min: 0,
-        max: 1,
+        max: 0,
+      },
+      Si: {
+        min: 0,
+        max: 0,
+      },
+      Cr: {
+        min: 0,
+        max: 0,
+      },
+      Ni: {
+        min: 0,
+        max: 0,
+      },
+      Cu: {
+        min: 0,
+        max: 0,
+      },
+      Mo: {
+        min: 0,
+        max: 0,
+      },
+      Nb: {
+        min: 0,
+        max: 0,
+      },
+      W: {
+        min: 0,
+        max: 0,
+      },
+      V: {
+        min: 0,
+        max: 0,
       },
     },
   },
@@ -51,7 +101,7 @@ export const ligas = {
     composicao: {
       C: {
         min: 0,
-        max: 10,
+        max: 0,
       },
       Mn: {
         min: 0,
@@ -59,7 +109,39 @@ export const ligas = {
       },
       Al: {
         min: 0,
-        max: 17,
+        max: 0,
+      },
+      Si: {
+        min: 0,
+        max: 0,
+      },
+      Cr: {
+        min: 0,
+        max: 0,
+      },
+      Ni: {
+        min: 0,
+        max: 0,
+      },
+      Cu: {
+        min: 0,
+        max: 0,
+      },
+      Mo: {
+        min: 0,
+        max: 0,
+      },
+      Nb: {
+        min: 0,
+        max: 0,
+      },
+      W: {
+        min: 0,
+        max: 0,
+      },
+      V: {
+        min: 0,
+        max: 0,
       },
     },
   },
@@ -71,11 +153,43 @@ export const ligas = {
       },
       Mn: {
         min: 0,
-        max: 22,
+        max: 0,
       },
       Al: {
         min: 0,
-        max: 17,
+        max: 0,
+      },
+      Si: {
+        min: 0,
+        max: 0,
+      },
+      Cr: {
+        min: 0,
+        max: 0,
+      },
+      Ni: {
+        min: 0,
+        max: 0,
+      },
+      Cu: {
+        min: 0,
+        max: 0,
+      },
+      Mo: {
+        min: 0,
+        max: 0,
+      },
+      Nb: {
+        min: 0,
+        max: 0,
+      },
+      W: {
+        min: 0,
+        max: 0,
+      },
+      V: {
+        min: 0,
+        max: 0,
       },
     },
   },
@@ -83,15 +197,47 @@ export const ligas = {
     composicao: {
       C: {
         min: 0,
-        max: 20,
+        max: 0,
       },
       Mn: {
         min: 0,
-        max: 22,
+        max: 0,
       },
       Al: {
         min: 0,
-        max: 17,
+        max: 0,
+      },
+      Si: {
+        min: 0,
+        max: 0,
+      },
+      Cr: {
+        min: 0,
+        max: 0,
+      },
+      Ni: {
+        min: 0,
+        max: 0,
+      },
+      Cu: {
+        min: 0,
+        max: 0,
+      },
+      Mo: {
+        min: 0,
+        max: 0,
+      },
+      Nb: {
+        min: 0,
+        max: 0,
+      },
+      W: {
+        min: 0,
+        max: 0,
+      },
+      V: {
+        min: 0,
+        max: 0,
       },
     },
   },
