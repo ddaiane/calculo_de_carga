@@ -1,0 +1,228 @@
+
+{
+300: {
+preco: 1,
+composicao: {
+C: {
+min: 0,
+max: 0.1
+},
+Mn: {
+min: 0,
+max: 20
+},
+Si: {
+min: 0,
+max: 10
+},
+Cr: {
+min: 10,
+max: 15
+},
+Ni: {
+min: 0,
+max: 5
+}
+}
+},
+350: {
+preco: 2,
+composicao: {
+C: {
+min: 0,
+max: 0.1
+},
+Mn: {
+min: 0,
+max: 10
+},
+Si: {
+min: 0,
+max: 10
+},
+Cr: {
+min: 20,
+max: 25
+},
+Ni: {
+min: 10,
+max: 20
+}
+}
+},
+500: {
+preco: 3,
+composicao: {
+C: {
+min: 0,
+max: 0.1
+},
+Mn: {
+min: 0,
+max: 20
+},
+Si: {
+min: 0,
+max: 20
+},
+Cr: {
+min: 10,
+max: 15
+},
+Ni: {
+min: 0,
+max: 5
+}
+}
+},
+550: {
+preco: 4,
+composicao: {
+C: {
+min: 0,
+max: 0.1
+},
+Mn: {
+min: 0,
+max: 10
+},
+Si: {
+min: 0,
+max: 10
+},
+Cr: {
+min: 20,
+max: 25
+},
+Ni: {
+min: 10,
+max: 20
+}
+}
+},
+C: {
+preco: 4,
+composicao: {
+C: {
+min: 97,
+max: 99
+},
+Mn: {
+min: 0,
+max: 0
+},
+Si: {
+min: 0,
+max: 0
+},
+Cr: {
+min: 0,
+max: 0
+},
+Ni: {
+min: 0,
+max: 0
+}
+}
+},
+MN: {
+preco: 8,
+composicao: {
+C: {
+min: 0,
+max: 0
+},
+Mn: {
+min: 99.5,
+max: 100
+},
+Si: {
+min: 0,
+max: 0
+},
+Cr: {
+min: 0,
+max: 0
+},
+Ni: {
+min: 0,
+max: 0
+}
+}
+},
+SI: {
+preco: 16,
+composicao: {
+C: {
+min: 0,
+max: 0
+},
+Mn: {
+min: 0,
+max: 0
+},
+Si: {
+min: 50,
+max: 70
+},
+Cr: {
+min: 0,
+max: 0
+},
+Ni: {
+min: 0,
+max: 0
+}
+}
+},
+CR: {
+preco: 32,
+composicao: {
+C: {
+min: 0,
+max: 0
+},
+Mn: {
+min: 0,
+max: 0
+},
+Si: {
+min: 0,
+max: 0
+},
+Cr: {
+min: 50,
+max: 75
+},
+Ni: {
+min: 0,
+max: 0
+}
+}
+},
+NI: {
+preco: 64,
+composicao: {
+C: {
+min: 0,
+max: 0
+},
+Mn: {
+min: 0,
+max: 0
+},
+Si: {
+min: 0,
+max: 0
+},
+Cr: {
+min: 0,
+max: 0
+},
+Ni: {
+min: 99.5,
+max: 100
+}
+}
+}
+}
