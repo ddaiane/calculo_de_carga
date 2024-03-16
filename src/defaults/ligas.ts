@@ -1,6 +1,7 @@
 import { TMateriaPrima, TCompositionFinal } from '../interfaces/ligas'
 
 export const materiaPrimaDefault: TMateriaPrima = {
+  preco: 0,
   composicao: {
     C: {
       min: 0,
