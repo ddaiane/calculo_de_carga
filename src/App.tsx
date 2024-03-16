@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './assets/css/App.css'
 
 import Container from 'react-bootstrap/Container'
@@ -9,57 +8,32 @@ import LigaFinalDefinition from './components/LigaFinalDefinition'
 import ListaMateriais from './components/ListaMateriais'
 import ListaComposicao from './components/ListaComposicao'
 
-//constantes
-import { ligas, ligaModel } from './constants/ligas'
-
-//interfaces
-import { IComposicao } from './interfaces/ligas'
+//contexts
+import { GlobalProvider } from './context/GlobalProvider'
 
 function App() {
-  const [ligaFinal, setLigaFinal] = useState<string>('')
-  const [pesoFinal, setPesoFinal] = useState<number | null>(null)
-  const [ligaResultante, setligaResultante] = useState<IComposicao>(ligaModel.composicao)
-
   return (
     <>
-      <Container>
-        <Stack gap={4}>
-          <div>
-            <LigaFinalDefinition
-              ligas={ligas}
-              setLigaFinal={setLigaFinal}
-              setPesoFinal={setPesoFinal}
-            />
-          </div>
-          <Stack direction="horizontal" gap={2} className="mx-auto">
+      <GlobalProvider>
+        <Container>
+          <Stack gap={4}>
             <div>
-              {ligaFinal && pesoFinal && (
-                <ListaMateriais
-                  ligas={ligas}
-                  ligaFinal={ligaFinal}
-                  setligaResultante={setligaResultante}
-                />
-              )}
+              <LigaFinalDefinition />
             </div>
-            <div>
-              {ligaFinal && pesoFinal && (
-                <ListaComposicao
-                  ligaToShow={ligaResultante}
-                  compositionType="Composição Resultante"
-                />
-              )}
-            </div>
-            <div>
-              {ligaFinal && pesoFinal && (
-                <ListaComposicao
-                  ligaToShow={ligaDesejada}
-                  compositionType="Composição Desejada"
-                />
-              )}
-            </div>
+            <Stack direction="horizontal" gap={2} className="mx-auto">
+              <div>
+                <ListaMateriais />
+              </div>
+              <div>
+                <ListaComposicao compositionType="Composição Resultante" />
+              </div>
+              <div>
+                <ListaComposicao compositionType="Composição Desejada" />
+              </div>
+            </Stack>
           </Stack>
-        </Stack>
-      </Container>
+        </Container>
+      </GlobalProvider>
     </>
   )
 }

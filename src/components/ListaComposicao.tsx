@@ -1,16 +1,39 @@
 import Table from 'react-bootstrap/Table'
+import { useContext } from 'react'
 
-import { IComposicao, IFaixa } from '../interfaces/ligas'
+import { TElementRange } from '../interfaces/ligas'
+import { GlobalContext } from '../context/GlobalProvider'
+import { IGlobalContext } from '../context/interfaces'
 
 type TProps = {
   compositionType: string
-  ligaToShow: IComposicao
 }
 
 export default function ListaComposicao(props: TProps) {
-  const { ligaToShow, compositionType } = props
+  const { compositionType } = props
+  const {
+    showMaterialsAndComposition,
+    ligaResultanteComposicao,
+    ligaDesejadaComposicao,
+  } = useContext<IGlobalContext>(GlobalContext)
 
-  const renderPorcentagem = (porcentagem: IFaixa | number) => {
+  if (!showMaterialsAndComposition) return null
+
+  const ligaToShowByCompositionType = () => {
+    switch (compositionType) {
+      case 'Composição Resultante':
+        return ligaResultanteComposicao
+      case 'Composição Desejada':
+        return ligaDesejadaComposicao
+      default:
+        return null
+    }
+  }
+  const ligaToShow = ligaToShowByCompositionType()
+
+  if (!ligaToShow) return null
+
+  const renderPorcentagem = (porcentagem: TElementRange | number) => {
     return typeof porcentagem == 'object' ? (
       <td>{`${porcentagem.min} - ${porcentagem.max}`}</td>
     ) : (
@@ -18,7 +41,7 @@ export default function ListaComposicao(props: TProps) {
     )
   }
 
-  const renderRow = (elem: string, porcentagem: IFaixa | number) => {
+  const renderRow = (elem: string, porcentagem: TElementRange | number) => {
     return (
       <tr>
         <td>{elem}</td>
