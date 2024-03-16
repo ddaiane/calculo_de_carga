@@ -7,8 +7,11 @@ import { useState } from 'react'
 import { IFaixa } from '../interfaces/ligas'
 
 export default function ListaMateriais(props: any) {
-    const { ligas, ligaFinal } = props
+    const { ligas, ligaFinal, setligaResultante } = props
     const [showOnlyRelevant, setShowOnlyRelevant] = useState(true)
+
+    //apenas setando uma hardcoded para teste
+    setligaResultante(ligas.material5.composicao)
 
     const printRow = (materialName: string) => {
         return (
