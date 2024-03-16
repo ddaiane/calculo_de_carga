@@ -6,11 +6,14 @@ import { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalProvider'
 import { IGlobalContext } from '../context/interfaces'
 
+import { TLigas } from '../constants/interfaces'
+
 export default function LigaFinalDefinition() {
   const {
     ligas,
     ligaDesejadaName,
     setLigaDesejadaName,
+    setLigaDesejadaComposicao,
     pesoFinalDesejado,
     setPesoFinalDesejado,
     setShowMaterialsAndComposition,
@@ -19,13 +22,17 @@ export default function LigaFinalDefinition() {
   setShowMaterialsAndComposition(false)
   if (ligaDesejadaName && pesoFinalDesejado) setShowMaterialsAndComposition(true)
 
+  const setLigaDesejada = (nomeLiga: keyof TLigas) => {
+    setLigaDesejadaName(nomeLiga)
+    setLigaDesejadaComposicao(ligas[nomeLiga].composicao)
+  }
   return (
     <Stack direction="horizontal" gap={5} className="mx-auto">
       <Form.Group controlId="ligaFinal">
         <Form.Label>Escolha a liga que deseja produzir:</Form.Label>
         <Form.Select
           aria-label="Escolha a liga que gostaria de produzir"
-          onChange={(e) => setLigaDesejadaName(e.target.value)}
+          onChange={(e) => setLigaDesejada(e.target.value as keyof TLigas)}
         >
           <option value={''}>Selecione</option>
           {Object.keys(ligas).map((liga) => (
