@@ -4,17 +4,19 @@ import Stack from 'react-bootstrap/Stack'
 
 import { useState, useContext } from 'react'
 
-import { GlobalContext} from '../context/GlobalProvider'
+import { GlobalContext } from '../context/GlobalProvider'
 import { IGlobalContext } from '../context/interfaces'
 
 import { TElementRange } from '../interfaces/ligas'
 import { TLigas } from '../constants/interfaces'
 
-export default function ListaMateriais({}) {
-  const { ligas, ligaDesejadaName, ligaDesejadaComposicao, pesoFinalDesejado } = useContext<IGlobalContext>(GlobalContext)
+export default function ListaMateriais() {
+  const { ligas, ligaDesejadaName, ligaDesejadaComposicao, showMaterialsAndComposition } =
+    useContext<IGlobalContext>(GlobalContext)
+
   const [showOnlyRelevant, setShowOnlyRelevant] = useState(true)
 
-if(!ligaDesejadaName || !pesoFinalDesejado) return null
+  if(!showMaterialsAndComposition) return null
 
   const printRow = (materialName: string) => {
     return (
@@ -28,16 +30,14 @@ if(!ligaDesejadaName || !pesoFinalDesejado) return null
   const checkIfRelevant = (materiaPrima: keyof TLigas) => {
     if (materiaPrima === ligaDesejadaName) return false
 
-    const ligaDesejadaElems: [string, TElementRange][] = Object.entries(
-      ligaDesejadaComposicao
-    )
+    const ligaDesejadaElems: [string, TElementRange][] = Object.entries(ligaDesejadaComposicao)
     const materiaPrimaComposicao = ligas[materiaPrima].composicao
 
     //para ser relevante, a materia prima não deve ter componente que não tem na liga final desejada
     return ligaDesejadaElems.every(([componente, faixa]) => {
       if (faixa.max == 0) {
-        return true
-      //  return materiaPrimaComposicao[componente].max === 0 ? true : false
+        //@ts-ignore
+        return materiaPrimaComposicao[componente].max === 0 ? true : false
       }
       return true
     })
@@ -72,7 +72,9 @@ if(!ligaDesejadaName || !pesoFinalDesejado) return null
           </thead>
           <tbody>
             {Object.keys(ligas).map((liga: string) => {
-              return showOnlyRelevant ? showRelevantMaterials(liga as keyof TLigas) : printRow(liga)
+              return showOnlyRelevant
+                ? showRelevantMaterials(liga as keyof TLigas)
+                : printRow(liga)
             })}
           </tbody>
         </Table>
