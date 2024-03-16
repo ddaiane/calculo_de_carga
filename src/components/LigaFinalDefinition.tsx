@@ -6,9 +6,7 @@ export default function LigaFinalDefinition(props: any) {
     return (
         <Stack direction="horizontal" gap={5} className="mx-auto">
             <Form.Group controlId="ligaFinal">
-                <Form.Label>
-                    Escolha a liga que deseja produzir:
-                </Form.Label>
+                <Form.Label>Escolha a liga que deseja produzir:</Form.Label>
                 <Form.Select
                     aria-label="Escolha a liga que gostaria de produzir"
                     onChange={(e) => setLigaFinal(e.target.value)}

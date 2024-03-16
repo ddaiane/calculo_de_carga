@@ -4,7 +4,7 @@ export interface IFaixa {
 }
 
 export interface IComposicao {
-    C: IFaixa | number,
-    Mn: IFaixa | number,
+    C: IFaixa | number
+    Mn: IFaixa | number
     Al: IFaixa | number
 }
