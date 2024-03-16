@@ -1,15 +1,22 @@
 import Form from 'react-bootstrap/Form'
 import Stack from 'react-bootstrap/Stack'
 
-export default function LigaFinalDefinition(props: any) {
-  const { ligas, setLigaFinal, setPesoFinal } = props
+import { useContext } from 'react'
+
+import { GlobalContext } from '../context/GlobalProvider'
+import { IGlobalContext } from '../context/interfaces'
+
+export default function LigaFinalDefinition({}) {
+  const { ligas, setLigaDesejadaName, setPesoFinalDesejado } =
+    useContext<IGlobalContext>(GlobalContext)
+
   return (
     <Stack direction="horizontal" gap={5} className="mx-auto">
       <Form.Group controlId="ligaFinal">
         <Form.Label>Escolha a liga que deseja produzir:</Form.Label>
         <Form.Select
           aria-label="Escolha a liga que gostaria de produzir"
-          onChange={(e) => setLigaFinal(e.target.value)}
+          onChange={(e) => setLigaDesejadaName(e.target.value)}
         >
           <option value={''}>Selecione</option>
           {Object.keys(ligas).map((liga) => (
@@ -24,7 +31,7 @@ export default function LigaFinalDefinition(props: any) {
           required
           type="number"
           name="pesoFinal"
-          onChange={(e) => setPesoFinal(e.target.value)}
+          onChange={(e) => setPesoFinalDesejado(Number(e.target.value))}
         />
       </Form.Group>
     </Stack>
