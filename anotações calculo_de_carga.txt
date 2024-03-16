@@ -4,10 +4,12 @@
 BB65 fator de estreitamento
 E59 C min
 F59 C max
-C60 massa a�o
+C60 massa aço
 
 =H91*C69+I91*C70+J91*C71+K91*C72+L91*C73+M91*C74+N91*C75+O91*C76+P91*C77+Q91*C78+R91*C79+S91*C80+T91*C81+U91*C82+V91*C83+W91*C84+X91*C85+Y91*C86+Z91*C87+AA91*C88+AB91*C89+AC91*C90+AD91*C91+AE91*C92+AF91*C93+AG91*C94+AH91*C95+AI91*C96+AJ91*C97+AK91*C98+AL91*C99+AM91*C100+AN91*C101+AO91*C102+AP91*C103+AQ91*C104+AR91*C105+AS91*C106+AT91*C107+AU91*C108+C109*AV91+C110*AW91+C111*AX91+C112*AY91+C113*AZ91+BA91*C114
 
-M�dia ponderada
+Média ponderada
 
 (PESO SUCATA1 * %C Sucata1 + PESO SUCATA2 * %C Sucata2)/PESO TOTAL
+
+Para primeira versão será considerado Composicao_max para as ligas fundidas e o resultante o Composicao_min para calcular; Garantir que nunca será resultante um material com mais elemento de liga que o desejado no final;
