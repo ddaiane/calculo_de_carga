@@ -1,6 +1,6 @@
 export type TElementRange = {
-  min: Number
-  max: Number
+  min: number
+  max: number
 }
 
 export type TCompositionRange = {
@@ -18,21 +18,19 @@ export type TCompositionRange = {
 }
 
 export type TCompositionFinal = {
-  C: Number
-  Mn: Number
-  Si: Number
-  Cr: Number
-  Ni: Number
-  Cu: Number
-  Mo: Number
-  Nb: Number
-  W: Number
-  V: Number
-  Al: Number
+  C: number
+  Mn: number
+  Si: number
+  Cr: number
+  Ni: number
+  Cu: number
+  Mo: number
+  Nb: number
+  W: number
+  V: number
+  Al: number
 }
 
 export type TMateriaPrima = {
   composicao: TCompositionRange
 }
-
-
