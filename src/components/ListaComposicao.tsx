@@ -35,9 +35,9 @@ export default function ListaComposicao(props: TProps) {
 
   const renderPorcentagem = (porcentagem: TElementRange | number) => {
     return typeof porcentagem == 'object' ? (
-      <td>{`${porcentagem.min} - ${porcentagem.max}`}</td>
+      <td>{`${porcentagem.min.toFixed(2)}% - ${porcentagem.max.toFixed(2)}%`}</td>
     ) : (
-      <td>{porcentagem}</td>
+      <td>{porcentagem ? porcentagem.toFixed(2) : 0}%</td>
     )
   }
 
