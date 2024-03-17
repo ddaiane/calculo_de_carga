@@ -32,6 +32,7 @@ export type TCompositionFinal = {
 }
 
 export type TMateriaPrima = {
+  name: string
   preco: number
   composicao: TCompositionRange
 }
