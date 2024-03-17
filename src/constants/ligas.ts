@@ -2,6 +2,7 @@ import { TLigas } from './interfaces'
 
 export const ligas: TLigas = {
   '304': {
+    name: '304',
     preco: 4,
     composicao: {
       C: {
@@ -51,6 +52,7 @@ export const ligas: TLigas = {
     },
   },
   '430': {
+    name: '403',
     preco: 1.3,
     composicao: {
       C: {
@@ -100,6 +102,7 @@ export const ligas: TLigas = {
     },
   },
   '1010': {
+    name: '1010',
     preco: 1,
     composicao: {
       C: {
@@ -149,6 +152,7 @@ export const ligas: TLigas = {
     },
   },
   '302': {
+    name: '302',
     preco: 3.65,
     composicao: {
       C: {
@@ -198,6 +202,7 @@ export const ligas: TLigas = {
     },
   },
   '321': {
+    name: '321',
     preco: 3.8,
     composicao: {
       C: {
@@ -247,6 +252,7 @@ export const ligas: TLigas = {
     },
   },
   FeCr: {
+    name: 'Fe Cr',
     preco: 15.7,
     composicao: {
       C: {
