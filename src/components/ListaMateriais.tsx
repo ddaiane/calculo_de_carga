@@ -4,6 +4,7 @@ import Stack from 'react-bootstrap/Stack'
 import Form from 'react-bootstrap/Form'
 
 import { useState, useContext } from 'react'
+import { useMaterialFundir } from '../hooks/useMaterialFundir'
 
 import { GlobalContext } from '../context/GlobalProvider'
 import { IGlobalContext } from '../context/interfaces'
@@ -12,26 +13,13 @@ import { TElementRange } from '../interfaces/ligas'
 import { TLigas } from '../constants/interfaces'
 
 export default function ListaMateriais() {
-  const {
-    ligas,
-    ligaDesejadaName,
-    ligaDesejadaComposicao,
-    showMaterialsAndComposition,
-    materiaisUsados,
-    setMateriaisUsados,
-  } = useContext<IGlobalContext>(GlobalContext)
+  const { ligas, ligaDesejadaName, ligaDesejadaComposicao, showMaterialsAndComposition } =
+    useContext<IGlobalContext>(GlobalContext)
 
   const [showOnlyRelevant, setShowOnlyRelevant] = useState(true)
+  const { setMaterialUsado } = useMaterialFundir()
 
   if (!showMaterialsAndComposition) return null
-
-  const setMaterialUsado = (materialName: string, peso: number) => {
-    let newMateriaisUsados = materiaisUsados.filter(
-      (material) => material.name != materialName
-    )
-    newMateriaisUsados.push({ name: materialName, peso: peso })
-    setMateriaisUsados(newMateriaisUsados)
-  }
 
   const printRow = (materialName: string) => {
     return (
